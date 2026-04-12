@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Microsoft Store EN-US to ES-MX Redirect
+// @name         Microsoft Store Locale Redirect
 // @namespace    https://apps.microsoft.com/
-// @version      1.2
-// @description  Redirige automáticamente Microsoft Store de en-US a es-MX.
+// @version      2.0.0
+// @description  Automatically redirects Microsoft Store pages to your browser's language and region.
 // @author       g31w0fw0rld
 // @license      MIT
 // @match        https://apps.microsoft.com/detail/*
@@ -15,34 +15,36 @@
     'use strict';
 
     // =============================================
-    // CONSTANTES
-    // =============================================
-
-    // Idioma de origen que dispara la redirección
-    const SOURCE_LANG = 'en-us';
-    // Parámetros de destino para México (español)
-    const TARGET_HL = 'es-MX';
-    const TARGET_GL = 'MX';
-
-    // =============================================
     // FUNCIONES
     // =============================================
 
     /**
-     * Comprueba si la URL actual tiene el parámetro 'hl' en inglés (en-US)
-     * y, de ser así, redirige a la versión es-MX reemplazando
-     * los parámetros 'hl' y 'gl' en la query string.
+     * Obtiene el locale del navegador (ej. "es-MX", "pt-BR", "en-US").
+     * @returns {{ hl: string, gl: string }} Parámetros de idioma y región.
+     */
+    function getBrowserLocale() {
+        const lang = navigator.language || navigator.languages[0] || 'en-US';
+        const parts = lang.split('-');
+        const hl = parts.length >= 2 ? `${parts[0]}-${parts[1].toUpperCase()}` : lang;
+        const gl = parts.length >= 2 ? parts[1].toUpperCase() : '';
+        return { hl, gl };
+    }
+
+    /**
+     * Comprueba si el locale de la URL difiere del locale del navegador.
+     * Si es así, redirige reemplazando los parámetros 'hl' y 'gl'.
      * Usa location.replace() para no dejar entrada en el historial.
      */
     function redirectIfNeeded() {
         const url = new URL(window.location.href);
-        const hl = (url.searchParams.get('hl') || '').toLowerCase();
+        const currentHl = (url.searchParams.get('hl') || '').toLowerCase();
+        const { hl, gl } = getBrowserLocale();
 
-        if (hl === SOURCE_LANG) {
-            url.searchParams.set('hl', TARGET_HL);
-            url.searchParams.set('gl', TARGET_GL);
-            window.location.replace(url.toString());
-        }
+        if (!currentHl || currentHl === hl.toLowerCase()) return;
+
+        url.searchParams.set('hl', hl);
+        if (gl) url.searchParams.set('gl', gl);
+        window.location.replace(url.toString());
     }
 
     // =============================================
@@ -51,6 +53,6 @@
     try {
         redirectIfNeeded();
     } catch (e) {
-        console.error('(mssredirect): Error al redirigir Microsoft Store:', e);
+        console.error('(microsoft-store-locale-redirect): Error al redirigir:', e);
     }
 })();
