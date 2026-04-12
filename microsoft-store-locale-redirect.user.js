@@ -4,6 +4,7 @@
 // @version      1.2
 // @description  Redirige automáticamente Microsoft Store de en-US a es-MX.
 // @author       g31w0fw0rld
+// @license      MIT
 // @match        https://apps.microsoft.com/detail/*
 // @downloadURL  https://github.com/g31w0fw0rld/microsoft-store-locale-redirect/raw/main/microsoft-store-locale-redirect.user.js
 // @updateURL    https://github.com/g31w0fw0rld/microsoft-store-locale-redirect/raw/main/microsoft-store-locale-redirect.user.js
