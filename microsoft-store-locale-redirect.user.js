@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Microsoft Store Locale Redirect
 // @namespace    https://apps.microsoft.com/
-// @version      2.3.0
+// @version      2.3.1
 // @description  Redirige las páginas de Microsoft Store (apps.microsoft.com) al idioma/región elegido (o del navegador), y en la lista de deseos (microsoft.com/…/store/wishlist) agrega ordenar y filtrar (por agregado, nombre, precio y descuento; filtro "solo con descuento") con recuerdo de la elección, URL compartible, selector de país/idioma de redirección y botón "Saber más".
 // @author       g31w0fw0rld
 // @license      MIT
@@ -201,7 +201,7 @@
     const ORD_ATTR = 'data-mswl-ord';
     const TOOLBAR_ID = 'mswl-toolbar';
     const STYLES_ID = 'mswl-styles';
-    const SCRIPT_VERSION = '2.3.0'; // sincronizar con @version
+    const SCRIPT_VERSION = '2.3.1'; // sincronizar con @version
     const SETTINGS_KEY = 'mswl-settings';
     const SORTS = ['added', 'name', 'price', 'discount'];
     const SORT_LABELS = { added: t.added, name: t.name, price: t.price, discount: t.discount };
