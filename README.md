@@ -11,8 +11,6 @@ Userscript de Tampermonkey que redirige Microsoft Store a tu país/idioma y aña
   - **Solo con descuento** y **Recordar** tu configuración.
   - **Copiar enlace**, **selector de país/idioma** de redirección, tooltips y botón **"Saber más"**.
 
-La preferencia de país/idioma se guarda en una cookie de `microsoft.com` (para que la lea `apps.microsoft.com`); el resto en `localStorage`. Nada se envía a servidores externos.
-
 **Idioma:** detección automática español / inglés.
 
 **Instalación:**
@@ -30,8 +28,6 @@ La preferencia de país/idioma se guarda en una cookie de `microsoft.com` (para 
   - **Only discounted** and **Remember** your setup.
   - **Copy link**, a **country/language selector** for the redirect, tooltips and a **"Learn more"** button.
 
-The country/language preference is stored in a `microsoft.com` cookie (so `apps.microsoft.com` can read it); the rest in `localStorage`. Nothing is sent to external servers.
-
 **Language:** automatic Spanish / English detection.
 
 **Install:**
@@ -39,6 +35,12 @@ The country/language preference is stored in a `microsoft.com` cookie (so `apps.
 2. Open the installer: [microsoft-store-locale-redirect.user.js](https://github.com/g31w0fw0rld/microsoft-store-locale-redirect/raw/main/microsoft-store-locale-redirect.user.js) (also on [GreasyFork](https://greasyfork.org/es-419/users/1590477-g31w) and [OpenUserJS](https://openuserjs.org/users/g31w0fw0rldgmail.com/scripts)).
 
 **Sites:** `apps.microsoft.com/detail/*`, `microsoft.com/…/store/wishlist`
+
+## Privacidad / Privacy
+
+**ES:** el script no hace ninguna petición a servidores externos y declara `@grant none`, así que no tiene acceso a las APIs privilegiadas del gestor de userscripts. Tu preferencia de país/idioma se guarda en una cookie propia (`mswl-locale`, dominio `.microsoft.com`, un año) porque la lista de deseos y las páginas de app viven en subdominios distintos que no comparten `localStorage`: la cookie contiene solo el locale que elijas, aunque —como cualquier cookie de ese dominio— viaja en las peticiones que tu navegador ya hace a `microsoft.com`. El orden y los filtros de la lista de deseos se guardan en `localStorage`, y la redirección solo cambia la URL dentro de la propia Microsoft Store. No se envía nada a terceros ni al autor.
+
+**EN:** the script makes no requests to external servers and declares `@grant none`, so it has no access to the userscript manager's privileged APIs. Your country/language preference is stored in its own cookie (`mswl-locale`, domain `.microsoft.com`, one year) because the wishlist and the app pages live on different subdomains that do not share `localStorage`: the cookie holds only the locale you pick, though —like any cookie on that domain— it travels with the requests your browser already makes to `microsoft.com`. The wishlist sort order and filters are stored in `localStorage`, and the redirect only changes the URL within the Microsoft Store itself. Nothing is sent to third parties or to the author.
 
 ## Apoyar / Support
 
