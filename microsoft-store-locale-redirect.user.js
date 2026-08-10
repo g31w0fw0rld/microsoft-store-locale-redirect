@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Microsoft Store Locale Redirect
 // @namespace    https://apps.microsoft.com/
-// @version      2.3.3
+// @version      2.3.4
 // @description  Sends Microsoft Store pages to the language and country you pick from 21 curated locales — a path segment on microsoft.com, hl/gl on apps.microsoft.com — keeping the choice in a cookie so both subdomains share it, redirecting without adding history entries, and clearing an invalid value instead of looping on it. On your wishlist it adds sort and filters with remembered settings, a shareable link and a 'Learn more' panel.
 // @author       g31w0fw0rld
 // @license      MIT
@@ -36,7 +36,7 @@
     const I18N = {
         es: {
             sortLabel: 'Ordenar:', added: 'Agregado', name: 'Nombre', price: 'Precio', discount: 'Descuento',
-onlyDiscount: 'Solo con descuento', remember: 'Recordar',
+            onlyDiscount: 'Solo con descuento', remember: 'Recordar',
             copy: '🔗 Copiar enlace', copied: '✔ Copiado', copyPrompt: 'Copia este enlace:',
             about: 'ℹ️ Saber más', close: 'Cerrar',
             regionLabel: 'Redirección:',
@@ -67,7 +67,7 @@ onlyDiscount: 'Solo con descuento', remember: 'Recordar',
         },
         en: {
             sortLabel: 'Sort:', added: 'Added', name: 'Name', price: 'Price', discount: 'Discount',
-onlyDiscount: 'Only discounted', remember: 'Remember',
+            onlyDiscount: 'Only discounted', remember: 'Remember',
             copy: '🔗 Copy link', copied: '✔ Copied', copyPrompt: 'Copy this link:',
             about: 'ℹ️ Learn more', close: 'Close',
             regionLabel: 'Redirect:',
@@ -214,7 +214,7 @@ onlyDiscount: 'Only discounted', remember: 'Remember',
     const ORD_ATTR = 'data-mswl-ord';
     const TOOLBAR_ID = 'mswl-toolbar';
     const STYLES_ID = 'mswl-styles';
-    const SCRIPT_VERSION = '2.3.3'; // sincronizar con @version
+    const SCRIPT_VERSION = '2.3.4'; // sincronizar con @version
     const SETTINGS_KEY = 'mswl-settings';
     const SORTS = ['added', 'name', 'price', 'discount'];
     const SORT_LABELS = { added: t.added, name: t.name, price: t.price, discount: t.discount };
