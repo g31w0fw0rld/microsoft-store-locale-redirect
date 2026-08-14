@@ -26,7 +26,7 @@ Tampermonkey userscript that redirects the Microsoft Store to your country/langu
 - **Copy link:** builds a URL that reproduces your sort and filters when opened. If the browser blocks clipboard access, it shows the URL in a dialog so you can copy it by hand.
 - **"Learn more"** button with the full explanation inside the page, and a tooltip on every control.
 
-**Language:** automatic Spanish / English detection, following the language Microsoft serves the page in. Note this is separate from the redirect locale: one is the script's own wording, the other is the store's region.
+**Language:** **13 languages** — English, Spanish, German, French, Italian, Dutch, Portuguese, Polish, Russian, Turkish, Japanese, Korean and Chinese. What wins is the locale you pick in the selector, so the toolbar speaks the same language as the page it sends you to instead of contradicting it; with `Auto`, or before you have picked anything, it falls back to `<html lang>`, then to the locale segment of the path, then to your browser, then to English. The two are still different settings, though: one is how the script talks, the other is the store's region.
 
 **Install:**
 1. Install [Tampermonkey](https://www.tampermonkey.net/).
@@ -54,7 +54,7 @@ Tampermonkey userscript that redirects the Microsoft Store to your country/langu
 - **Copiar enlace:** genera una URL que al abrirla reproduce tu orden y tus filtros. Si el navegador bloquea el portapapeles, muestra la URL en un diálogo para copiarla a mano.
 - Botón **"Saber más"** con la explicación completa dentro de la página, y un tooltip en cada control.
 
-**Idioma:** detección automática español / inglés, siguiendo el idioma con el que Microsoft sirve la página. Ojo, es independiente del locale de redirección: uno es cómo habla el script, el otro es la región de la tienda.
+**Idioma:** **13 idiomas** —inglés, español, alemán, francés, italiano, neerlandés, portugués, polaco, ruso, turco, japonés, coreano y chino—. Lo que manda es el locale que elijas en el selector, para que la barra hable el mismo idioma que la página a la que te lleva en vez de contradecirla; con `Auto`, o antes de que elijas nada, cae al `<html lang>`, luego al segmento de locale de la ruta, luego al navegador, luego a inglés. Aun así son dos ajustes distintos: uno es cómo habla el script, el otro es la región de la tienda.
 
 **Instalación:**
 1. Instala [Tampermonkey](https://www.tampermonkey.net/).
