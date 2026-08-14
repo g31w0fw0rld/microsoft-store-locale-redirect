@@ -24,7 +24,7 @@ Tampermonkey userscript that redirects the Microsoft Store to your country/langu
 - **Only discounted:** hides everything that is not on sale.
 - **Remember:** saves your sort and filters and reapplies them when you come back.
 - **Copy link:** builds a URL that reproduces your sort and filters when opened. If the browser blocks clipboard access, it shows the URL in a dialog so you can copy it by hand.
-- **"Learn more"** button with the full explanation inside the page, and a tooltip on every control.
+- **"Learn more"** button with the full explanation inside the page, and a tooltip on every control — **drawn by the script itself**, not by the browser: the store has no tooltip of its own to borrow (the only one on the page belongs to Microsoft's universal header), and this toolbar is the script's own UI, so the box uses its palette, opens on keyboard focus too, and is wide enough for the long ones. The browser tooltip stays underneath as the fallback.
 
 **Language:** **13 languages** — English, Spanish, German, French, Italian, Dutch, Portuguese, Polish, Russian, Turkish, Japanese, Korean and Chinese. What wins is the locale you pick in the selector, so the toolbar speaks the same language as the page it sends you to instead of contradicting it; with `Auto`, or before you have picked anything, it falls back to `<html lang>`, then to the locale segment of the path, then to your browser, then to English. The two are still different settings, though: one is how the script talks, the other is the store's region.
 
@@ -52,7 +52,7 @@ Tampermonkey userscript that redirects the Microsoft Store to your country/langu
 - **Solo con descuento:** oculta todo lo que no está en oferta.
 - **Recordar:** guarda tu orden y tus filtros y los reaplica al volver.
 - **Copiar enlace:** genera una URL que al abrirla reproduce tu orden y tus filtros. Si el navegador bloquea el portapapeles, muestra la URL en un diálogo para copiarla a mano.
-- Botón **"Saber más"** con la explicación completa dentro de la página, y un tooltip en cada control.
+- Botón **"Saber más"** con la explicación completa dentro de la página, y un tooltip en cada control —**dibujado por el propio script**, no por el navegador: la tienda no tiene tooltip propio que tomar prestado (el único de la página es el del header universal de Microsoft) y esta barra es UI del script, así que la caja usa su paleta, sale también al enfocar con el teclado y es lo bastante ancha para los avisos largos—. El del navegador se queda debajo como respaldo.
 
 **Idioma:** **13 idiomas** —inglés, español, alemán, francés, italiano, neerlandés, portugués, polaco, ruso, turco, japonés, coreano y chino—. Lo que manda es el locale que elijas en el selector, para que la barra hable el mismo idioma que la página a la que te lleva en vez de contradecirla; con `Auto`, o antes de que elijas nada, cae al `<html lang>`, luego al segmento de locale de la ruta, luego al navegador, luego a inglés. Aun así son dos ajustes distintos: uno es cómo habla el script, el otro es la región de la tienda.
 
