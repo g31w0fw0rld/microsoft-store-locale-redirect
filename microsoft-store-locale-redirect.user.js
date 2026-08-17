@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Microsoft Store Locale Redirect
 // @namespace    https://apps.microsoft.com/
-// @version      2.6.1
+// @version      2.6.2
 // @description  Sends Microsoft Store pages to the language and country you pick from 21 curated locales — a path segment on microsoft.com, hl/gl on apps.microsoft.com — keeping the choice in a cookie so both subdomains share it, redirecting without adding history entries, and clearing an invalid value instead of looping on it. On your wishlist it adds sort and filters with remembered settings, a shareable link and a 'Learn more' panel. On game pages it adds GG.deals and PCGamingWiki buttons.
 // @author       g31w0fw0rld
 // @license      MIT
@@ -61,6 +61,9 @@
             pcgwTip: 'Searches the title on PCGamingWiki (compatibility and fixes), without the edition suffix. Being a title search it may not hit the exact article, and DLC have no page of their own.',
             aboutTip: 'See everything this script does.',
             aboutTitle: 'What does this script do?',
+            aboutName: 'Name:',
+            aboutVersion: 'Version:',
+            aboutAuthor: 'Author:',
             aboutBody: [
                 'This script improves Microsoft Store in three ways:',
                 '• Region redirect: takes Microsoft Store pages —apps.microsoft.com and your wishlist— to the language/country (locale) you pick in the selector. With "Auto" it does not redirect.',
@@ -100,6 +103,9 @@
             pcgwTip: 'Busca el título en PCGamingWiki (compatibilidad y arreglos), sin el sufijo de edición. Al buscar por nombre puede no dar con el artículo exacto, y los DLC no tienen página propia.',
             aboutTip: 'Ver qué hace este script en su totalidad.',
             aboutTitle: '¿Qué hace este script?',
+            aboutName: 'Nombre:',
+            aboutVersion: 'Versión:',
+            aboutAuthor: 'Autor:',
             aboutBody: [
                 'Este script mejora Microsoft Store en tres frentes:',
                 '• Redirección de región: lleva las páginas de Microsoft Store —apps.microsoft.com y tu lista de deseos— al idioma/país (locale) que elijas en el selector. Con "Auto" no redirige.',
@@ -139,6 +145,9 @@
             pcgwTip: 'Sucht den Titel auf PCGamingWiki (Kompatibilität und Fixes), ohne den Editionszusatz. Da es eine Titelsuche ist, wird nicht immer der exakte Artikel getroffen, und DLC haben keine eigene Seite.',
             aboutTip: 'Alles ansehen, was dieses Skript macht.',
             aboutTitle: 'Was macht dieses Skript?',
+            aboutName: 'Name:',
+            aboutVersion: 'Version:',
+            aboutAuthor: 'Autor:',
             aboutBody: [
                 'Dieses Skript verbessert den Microsoft Store an drei Stellen:',
                 '• Regionsweiterleitung: bringt Seiten des Microsoft Store – apps.microsoft.com und deine Wunschliste – in die Sprache bzw. das Land (Gebietsschema), das du im Auswahlmenü wählst. Mit „Automatisch“ wird nicht weitergeleitet.',
@@ -178,6 +187,9 @@
             pcgwTip: 'Recherche le titre sur PCGamingWiki (compatibilité et correctifs), sans le suffixe d’édition. S’agissant d’une recherche par titre, l’article exact peut ne pas être trouvé, et les DLC n’ont pas de page propre.',
             aboutTip: 'Voir tout ce que fait ce script.',
             aboutTitle: 'Que fait ce script ?',
+            aboutName: 'Nom :',
+            aboutVersion: 'Version :',
+            aboutAuthor: 'Auteur :',
             aboutBody: [
                 'Ce script améliore le Microsoft Store sur trois fronts :',
                 '• Redirection de région : emmène les pages du Microsoft Store — apps.microsoft.com et votre liste de souhaits — vers la langue et le pays (paramètres régionaux) choisis dans le sélecteur. Avec « Auto », aucune redirection.',
@@ -217,6 +229,9 @@
             pcgwTip: 'Cerca il titolo su PCGamingWiki (compatibilità e correzioni), senza il suffisso di edizione. Trattandosi di una ricerca per titolo potrebbe non trovare la voce esatta, e i DLC non hanno una pagina propria.',
             aboutTip: 'Vedi tutto quello che fa questo script.',
             aboutTitle: 'Che cosa fa questo script?',
+            aboutName: 'Nome:',
+            aboutVersion: 'Versione:',
+            aboutAuthor: 'Autore:',
             aboutBody: [
                 'Questo script migliora il Microsoft Store su tre fronti:',
                 '• Reindirizzamento di regione: porta le pagine del Microsoft Store — apps.microsoft.com e la tua lista dei desideri — alla lingua e al paese (impostazioni internazionali) che scegli nel selettore. Con «Auto» non reindirizza.',
@@ -256,6 +271,9 @@
             pcgwTip: 'Zoekt de titel op PCGamingWiki (compatibiliteit en fixes), zonder het editiesuffix. Omdat het een titelzoekopdracht is wordt niet altijd het exacte artikel gevonden, en DLC hebben geen eigen pagina.',
             aboutTip: 'Bekijk alles wat dit script doet.',
             aboutTitle: 'Wat doet dit script?',
+            aboutName: 'Naam:',
+            aboutVersion: 'Versie:',
+            aboutAuthor: 'Auteur:',
             aboutBody: [
                 'Dit script verbetert de Microsoft Store op drie vlakken:',
                 '• Regio-omleiding: brengt Microsoft Store-pagina’s — apps.microsoft.com en je verlanglijst — naar de taal en het land (landinstelling) die je in de keuzelijst kiest. Met "Auto" wordt er niet omgeleid.',
@@ -295,6 +313,9 @@
             pcgwTip: 'Procura o título no PCGamingWiki (compatibilidade e correções), sem o sufixo de edição. Sendo uma pesquisa por título pode não encontrar o artigo exato, e os DLC não têm página própria.',
             aboutTip: 'Ver tudo o que este script faz.',
             aboutTitle: 'O que faz este script?',
+            aboutName: 'Nome:',
+            aboutVersion: 'Versão:',
+            aboutAuthor: 'Autor:',
             aboutBody: [
                 'Este script melhora a Microsoft Store em três frentes:',
                 '• Redirecionamento de região: leva as páginas da Microsoft Store — apps.microsoft.com e a sua lista de desejos — para o idioma e país (região) que escolher no seletor. Com "Automático" não redireciona.',
@@ -334,6 +355,9 @@
             pcgwTip: 'Wyszukuje tytuł w PCGamingWiki (zgodność i poprawki), bez końcówki edycji. Ponieważ to wyszukiwanie po tytule, może nie trafić w dokładny artykuł, a dodatki DLC nie mają własnej strony.',
             aboutTip: 'Zobacz wszystko, co robi ten skrypt.',
             aboutTitle: 'Co robi ten skrypt?',
+            aboutName: 'Nazwa:',
+            aboutVersion: 'Wersja:',
+            aboutAuthor: 'Autor:',
             aboutBody: [
                 'Ten skrypt ulepsza Microsoft Store na trzy sposoby:',
                 '• Przekierowanie regionu: przenosi strony Microsoft Store — apps.microsoft.com i twoją listę życzeń — do języka i kraju (ustawień regionalnych) wybranych w liście. Przy „Auto” nie przekierowuje.',
@@ -373,6 +397,9 @@
             pcgwTip: 'Ищет название на PCGamingWiki (совместимость и исправления), без суффикса издания. Это поиск по названию, поэтому нужная статья может не найтись, а у дополнений нет своей страницы.',
             aboutTip: 'Посмотреть всё, что делает этот скрипт.',
             aboutTitle: 'Что делает этот скрипт?',
+            aboutName: 'Название:',
+            aboutVersion: 'Версия:',
+            aboutAuthor: 'Автор:',
             aboutBody: [
                 'Этот скрипт улучшает Microsoft Store по трём направлениям:',
                 '• Перенаправление региона: переводит страницы Microsoft Store — apps.microsoft.com и ваш список желаемого — на язык и страну, выбранные в списке. При «Авто» перенаправления нет.',
@@ -412,6 +439,9 @@
             pcgwTip: 'Başlığı PCGamingWiki üzerinde arar (uyumluluk ve düzeltmeler), sürüm ekini kullanmadan. Başlığa göre arama olduğu için tam makaleyi bulamayabilir ve ek paketlerin kendine ait sayfası yoktur.',
             aboutTip: 'Bu betiğin yaptığı her şeyi görün.',
             aboutTitle: 'Bu betik ne yapar?',
+            aboutName: 'Ad:',
+            aboutVersion: 'Sürüm:',
+            aboutAuthor: 'Yazar:',
             aboutBody: [
                 'Bu betik Microsoft Store’u üç noktada iyileştirir:',
                 '• Bölge yönlendirmesi: Microsoft Store sayfalarını — apps.microsoft.com ve istek listenizi — seçicide seçtiğiniz dil ve ülkeye (yerel ayar) götürür. "Otomatik" seçiliyken yönlendirme yapmaz.',
@@ -451,6 +481,9 @@
             pcgwTip: 'PCGamingWiki でタイトルを検索します（互換性と修正）。エディションの接尾辞は外します。タイトル検索のため目的の記事に一致しないことがあり、DLC には専用ページがありません。',
             aboutTip: 'このスクリプトの機能をすべて見る。',
             aboutTitle: 'このスクリプトは何をしますか？',
+            aboutName: '名前:',
+            aboutVersion: 'バージョン:',
+            aboutAuthor: '作者:',
             aboutBody: [
                 'このスクリプトは Microsoft Store を3つの面で改善します:',
                 '• 地域リダイレクト: Microsoft Store のページ（apps.microsoft.com とウィッシュリスト）を、選択した言語・国（ロケール）へ移動させます。「自動」ではリダイレクトしません。',
@@ -490,6 +523,9 @@
             pcgwTip: 'PCGamingWiki에서 제목을 검색합니다(호환성 및 수정). 에디션 접미사는 뺍니다. 제목 검색이라 정확한 문서를 찾지 못할 수 있고, DLC는 자체 문서가 없습니다.',
             aboutTip: '이 스크립트가 하는 모든 것을 확인하세요.',
             aboutTitle: '이 스크립트는 무엇을 하나요?',
+            aboutName: '이름:',
+            aboutVersion: '버전:',
+            aboutAuthor: '작성자:',
             aboutBody: [
                 '이 스크립트는 Microsoft Store를 세 가지 방향에서 개선합니다:',
                 '• 지역 리디렉션: Microsoft Store 페이지(apps.microsoft.com과 위시리스트)를 선택기에서 고른 언어와 국가(로캘)로 보냅니다. "자동"에서는 리디렉션하지 않습니다.',
@@ -529,6 +565,9 @@
             pcgwTip: '在 PCGamingWiki 上搜索该标题（兼容性与修复），不带版本后缀。由于是按标题搜索，可能无法精确匹配到对应条目，而且 DLC 没有独立页面。',
             aboutTip: '查看此脚本的全部功能。',
             aboutTitle: '这个脚本有什么用？',
+            aboutName: '名称：',
+            aboutVersion: '版本：',
+            aboutAuthor: '作者：',
             aboutBody: [
                 '本脚本从三个方面改进 Microsoft Store：',
                 '• 区域重定向：把 Microsoft Store 的页面（apps.microsoft.com 和你的愿望单）带到你在选择器中选定的语言和国家/地区（区域设置）。选择“自动”则不重定向。',
@@ -757,7 +796,7 @@
     const ORD_ATTR = 'data-mswl-ord';
     const TOOLBAR_ID = 'mswl-toolbar';
     const STYLES_ID = 'mswl-styles';
-    const SCRIPT_VERSION = '2.6.1'; // sincronizar con @version
+    const SCRIPT_VERSION = '2.6.2'; // sincronizar con @version
     const SETTINGS_KEY = 'mswl-settings';
     const SORTS = ['added', 'name', 'price', 'discount'];
     const SORT_LABELS = { added: t.added, name: t.name, price: t.price, discount: t.discount };
@@ -910,79 +949,222 @@
     }
 
     // --- Modal "Saber más" (autocontenido) --------------------------------------
+    // Tres bandas: cabecera fija (título + ficha), cuerpo scrollable y botón fijo,
+    // como el modal de información de los scripts de Twitch y Kick. Antes scrolleaba
+    // la caja ENTERA, y con un cuerpo de 19 párrafos eso se llevaba el título fuera
+    // de vista y dejaba el botón de cerrar al final del scroll: se abría un panel sin
+    // encabezado del que no era evidente cómo salir.
+    const ABOUT_ID = 'mswl-about-overlay';
+    const ABOUT_NAME = 'Microsoft Store Locale Redirect';
+    const ABOUT_REPO = 'g31w0fw0rld/microsoft-store-locale-redirect';
+
+    // El separador de las etiquetas ("Nombre:" / "Nom :" / "名称：") se toma de una
+    // ya traducida, para que "GitHub" y "Ko-fi" —que no se traducen— no contradigan
+    // la puntuación del idioma activo.
+    function aboutColon() {
+        const m = String(t.aboutVersion || ':').match(/\s*[:：]\s*$/);
+        return m ? m[0] : ':';
+    }
+
+    // Marca inerte el resto de la página mientras el modal está abierto, y guarda lo
+    // que hubiera para devolverlo tal cual al cerrar. Sin esto el tabulador se pasea
+    // por la tienda que hay detrás del overlay, que no se ve pero sigue ahí.
+    function aboutSetInert(overlay, on) {
+        if (on) {
+            const saved = [];
+            Array.from(document.body.children).forEach((el) => {
+                if (el === overlay) return;
+                saved.push({ el, ariaHidden: el.getAttribute('aria-hidden') });
+                try { el.setAttribute('aria-hidden', 'true'); el.inert = true; } catch (e) { /* noop */ }
+            });
+            overlay._savedInert = saved;
+        } else {
+            (overlay._savedInert || []).forEach((s) => {
+                try {
+                    if (s.ariaHidden === null) s.el.removeAttribute('aria-hidden');
+                    else s.el.setAttribute('aria-hidden', s.ariaHidden);
+                    s.el.inert = false;
+                } catch (e) { /* noop */ }
+            });
+            overlay._savedInert = null;
+        }
+    }
+
+    // Una fila del cuerpo. Los marcadores del texto ('•' grupo, '–' subpunto) son
+    // ESTRUCTURA, no texto: se consumen y se traducen a jerarquía visual. La sangría
+    // es francesa (padding + text-indent negativo) para que al partirse la línea la
+    // segunda no vuelva al margen y el marcador siga marcando columna.
+    function aboutRow(raw, prevKind) {
+        const text = String(raw).replace(/^\s+/, '');
+        const row = document.createElement('div');
+        let kind = 'plain';
+        if (text.startsWith('•')) {
+            kind = 'group';
+            row.textContent = text.slice(1).trim();
+            Object.assign(row.style, {
+                color: MS_BLUE, fontWeight: '600', marginBottom: '8px',
+                marginTop: prevKind ? '18px' : '0'
+            });
+        } else if (text.startsWith('–')) {
+            kind = 'item';
+            row.textContent = text;
+            Object.assign(row.style, {
+                paddingInlineStart: '30px', textIndent: '-16px', marginBottom: '7px', color: '#4a4a4a'
+            });
+        } else {
+            row.textContent = text;
+            row.style.marginBottom = '10px';
+            // Un párrafo suelto detrás de una lista es la coda del bloque, no otro
+            // punto de la lista: sin este respiro se lee pegado al último subpunto.
+            if (prevKind && prevKind !== 'plain') row.style.marginTop = '16px';
+        }
+        return { row, kind };
+    }
+
     function showAboutModal() {
-        if (document.getElementById('mswl-about-overlay')) return;
+        if (document.getElementById(ABOUT_ID)) return;
         const overlay = document.createElement('div');
-        overlay.id = 'mswl-about-overlay';
+        overlay.id = ABOUT_ID;
         Object.assign(overlay.style, {
             position: 'fixed', inset: '0', width: '100%', height: '100%',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
+            // El padding reserva el hueco contra el que se acota la caja (maxHeight
+            // al 100%), y de paso evita que quede pegada a los bordes de la ventana.
+            padding: '24px', boxSizing: 'border-box',
             background: 'rgba(0,0,0,0.6)', zIndex: '2147483647',
             transition: 'opacity 180ms ease', opacity: '0'
         });
         const box = document.createElement('div');
         Object.assign(box.style, {
             // Panel claro, como el resto de la tienda: el fondo oscuro de antes se
-            // leía como una ventana ajena encima de la página.
+            // leía como una ventana ajena encima de la página. Pero blanco sobre una
+            // lista de deseos blanca necesita contorno propio: el gris de separación
+            // de Fluent no se ve contra la página, así que borde neutro más marcado
+            // y sombra más profunda.
             background: MS_SURFACE, color: MS_TEXT, borderRadius: '14px',
-            padding: '26px 30px', minWidth: '320px', maxWidth: '560px',
-            maxHeight: '80vh', overflowY: 'auto', boxSizing: 'border-box',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.28)', border: `1px solid ${MS_BORDER}`,
-            fontFamily: 'Segoe UI, system-ui, sans-serif', fontSize: '14px', lineHeight: '1.5',
+            padding: '26px 30px', minWidth: 'min(340px, 100%)', maxWidth: '560px',
+            maxHeight: '100%', boxSizing: 'border-box',
+            boxShadow: '0 12px 40px rgba(0,0,0,0.32)', border: '1px solid #c8c6c4',
+            fontFamily: 'Segoe UI, system-ui, sans-serif', fontSize: '14px', lineHeight: '1.55',
+            // Flex en columna con overflow oculto: scrollea solo la banda del medio.
+            display: 'flex', flexDirection: 'column', overflow: 'hidden',
             transform: 'translateY(8px) scale(0.98)', opacity: '0',
             transition: 'transform 180ms ease, opacity 180ms ease'
         });
+
+        const hairline = () => {
+            const hr = document.createElement('div');
+            Object.assign(hr.style, {
+                height: '1px', background: MS_BORDER, margin: '14px 0', flexShrink: '0'
+            });
+            return hr;
+        };
+
+        // --- Cabecera fija: título y ficha ---
+        const head = document.createElement('div');
+        head.style.flexShrink = '0';
+
         const title = document.createElement('div');
         title.textContent = t.aboutTitle;
-        title.style.cssText = `font-weight:bold;font-size:17px;margin-bottom:14px;color:${MS_BLUE};`;
-        box.appendChild(title);
-        (t.aboutBody || []).forEach((p) => {
-            const row = document.createElement('div');
-            const trimmed = String(p).replace(/^\s+/, '');
-            row.textContent = trimmed;
-            row.style.marginBottom = '8px';
-            if (trimmed.startsWith('–')) row.style.paddingLeft = '22px';
-            else if (trimmed.startsWith('•')) row.style.paddingLeft = '10px';
-            box.appendChild(row);
+        title.style.cssText = `font-weight:bold;font-size:17px;margin-bottom:12px;color:${MS_BLUE};`;
+        head.appendChild(title);
+
+        // Ficha en rejilla de dos columnas: así los cinco valores quedan alineados
+        // en vez de escalonados según lo que mida cada etiqueta.
+        const meta = document.createElement('div');
+        Object.assign(meta.style, {
+            display: 'grid', gridTemplateColumns: 'auto minmax(0, 1fr)',
+            columnGap: '10px', rowGap: '5px', fontSize: '13px'
         });
-        const gh = document.createElement('a');
-        gh.href = 'https://github.com/g31w0fw0rld/microsoft-store-locale-redirect';
-        gh.target = '_blank'; gh.rel = 'noopener';
-        gh.textContent = 'github.com/g31w0fw0rld/microsoft-store-locale-redirect';
-        gh.style.cssText = `display:inline-block;margin-top:6px;color:${MS_BLUE};text-decoration:underline;font-size:12px;`;
-        box.appendChild(gh);
-        const kofi = document.createElement('a');
-        kofi.href = 'https://ko-fi.com/g31w0fw0rld';
-        kofi.target = '_blank'; kofi.rel = 'noopener';
-        kofi.textContent = '☕ Apóyame en Ko-fi / Support me on Ko-fi';
-        kofi.style.cssText = `display:block;margin-top:8px;color:${MS_BLUE};text-decoration:underline;font-size:12px;`;
-        box.appendChild(kofi);
-        const foot = document.createElement('div');
-        foot.textContent = 'v' + SCRIPT_VERSION + ' · g31w0fw0rld';
-        foot.style.cssText = 'margin-top:2px;font-size:12px;opacity:0.7;';
-        box.appendChild(foot);
+        const colon = aboutColon();
+        [
+            { label: t.aboutName, value: ABOUT_NAME },
+            { label: t.aboutVersion, value: SCRIPT_VERSION },
+            { label: t.aboutAuthor, value: 'g31w0fw0rld' },
+            { label: 'GitHub' + colon, value: 'github.com/' + ABOUT_REPO, isLink: true },
+            { label: '☕ Ko-fi' + colon, value: 'ko-fi.com/g31w0fw0rld', isLink: true }
+        ].forEach((r) => {
+            const label = document.createElement('div');
+            label.textContent = r.label;
+            Object.assign(label.style, { fontWeight: '600', color: '#5b5b5b', whiteSpace: 'nowrap' });
+            meta.appendChild(label);
+            const val = document.createElement('div');
+            // Sin esto la URL no parte y estira la caja más allá de su maxWidth.
+            Object.assign(val.style, { minWidth: '0', overflowWrap: 'anywhere' });
+            if (r.isLink) {
+                const a = document.createElement('a');
+                a.href = 'https://' + r.value;
+                a.textContent = r.value;
+                a.target = '_blank'; a.rel = 'noopener noreferrer';
+                a.style.color = MS_BLUE;
+                a.style.textDecoration = 'underline';
+                val.appendChild(a);
+            } else {
+                val.textContent = r.value;
+            }
+            meta.appendChild(val);
+        });
+        head.appendChild(meta);
+        head.appendChild(hairline());
+        box.appendChild(head);
+
+        // --- Cuerpo scrollable ---
+        const body = document.createElement('div');
+        Object.assign(body.style, {
+            overflowY: 'auto', minHeight: '0', paddingInlineEnd: '4px'
+        });
+        // `prevKind` arranca en null a propósito: marca "no hay nada encima", que es
+        // lo que distingue al primer párrafo (pegado a la línea divisoria de la
+        // cabecera, sin margen extra) de los demás.
+        let prevKind = null;
+        (t.aboutBody || []).forEach((p) => {
+            const { row, kind } = aboutRow(p, prevKind);
+            body.appendChild(row);
+            prevKind = kind;
+        });
+        box.appendChild(body);
+        box.appendChild(hairline());
+
+        // --- Botón fijo ---
         const closeBtn = document.createElement('button');
         closeBtn.type = 'button';
         closeBtn.textContent = t.close;
-        closeBtn.style.cssText = `display:block;margin-top:16px;padding:8px 14px;background:${MS_BLUE};color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:bold;font-size:13px;`;
+        closeBtn.style.cssText = `flex-shrink:0;align-self:center;padding:8px 18px;background:${MS_BLUE};color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:13px;`;
+        closeBtn.addEventListener('mouseenter', () => { closeBtn.style.background = MS_BLUE_DARK; });
+        closeBtn.addEventListener('mouseleave', () => { closeBtn.style.background = MS_BLUE; });
         box.appendChild(closeBtn);
+
+        // El listener de Escape vive en document —el modal no tiene por qué tener el
+        // foco dentro cuando llega la tecla—, así que hay que quitarlo SIEMPRE al
+        // cerrar, también desde el botón: si no, se acumula uno por cada apertura.
         const closeIt = () => {
+            document.removeEventListener('keydown', onKey);
+            overlay.removeEventListener('click', onClick);
             overlay.style.opacity = '0'; box.style.opacity = '0';
             box.style.transform = 'translateY(8px) scale(0.98)';
-            document.removeEventListener('keydown', onKey);
-            setTimeout(() => overlay.remove(), 180);
+            setTimeout(() => {
+                aboutSetInert(overlay, false);
+                overlay.remove();
+            }, 180);
         };
         const onKey = (e) => { if (e.key === 'Escape') closeIt(); };
+        // Solo el fondo: un clic dentro de la caja no debe cerrar.
+        const onClick = (e) => { if (e.target === overlay) closeIt(); };
         closeBtn.addEventListener('click', closeIt);
-        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeIt(); });
+        overlay.addEventListener('click', onClick);
         document.addEventListener('keydown', onKey);
+
         overlay.appendChild(box);
         document.body.appendChild(overlay);
+        aboutSetInert(overlay, true);
         setTimeout(() => {
             overlay.style.opacity = '1';
             box.style.transform = 'translateY(0) scale(1)';
             box.style.opacity = '1';
         }, 10);
+        // Sin esto el foco se queda en el ℹ️ de la barra, que aboutSetInert acaba de
+        // marcar inert, y se cae a <body>.
+        setTimeout(() => { try { closeBtn.focus(); } catch (e) { /* noop */ } }, 120);
     }
 
     // Construye un <select> a partir de la lista curada de códigos, con las
